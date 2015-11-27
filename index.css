@@ -1,0 +1,183 @@
+/*	base*/
+/*css reset*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+/*html5标签重设定，在js下createElement，之后默认是行内元素*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+fieldset,
+img {
+    border: none;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+/*html5多媒体元素*/
+
+/*去除边框*/
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* 去掉 table cell 的边距并让其边重合 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    background-color: #F9F9F9;
+    font-family:arial,'微软雅黑',"宋体",Georgia,Serif;
+}
+textarea{
+    border: 0px none;
+    resize: none;
+    outline: 0px none;
+    z-index: 3;
+    color: #333;
+    font-size: 16px;
+    overflow: hidden;
+    min-height: 140px;
+    width: 100%;
+    font-family:arial,'微软雅黑',"宋体",Georgia,Serif;
+    background-color: inherit;
+    overflow-y: visible;
+}
+
+.clear{*zoom:1;}
+.clear:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.hide{
+    visibility: hidden;
+}
+.header{
+    box-sizing: border-box;
+    height:100px;
+    line-height: 100px;
+    width:100%;
+    background-color: #FFF;
+    text-align: center;
+    border-bottom: 1px solid cornflowerblue;
+}
+.header h1{
+    font-size: 24px;
+    color:firebrick;
+}
+.container{
+    margin-top: 20px;
+    padding: 0px 5%;
+}
+.left_input,.right_output{
+    width: 45%;
+    border: 1px solid gray;
+    padding: 10px;
+    background: white;
+    overflow-y:visible;
+}
+.left_input{
+    position: relative;
+    float: left;
+}
+.textarea-clear-btn {
+    position:absolute;
+    right:0;
+    top:5px;
+    width: 25px;
+    height: 25px;
+    background: transparent url("img/clear.png") no-repeat scroll -20px -10px;
+    display: inline;
+    margin: 0px 0px 0px 10px;
+}
+.right_output{
+    min-height: 140px;
+    float: right;
+    background: #F0F0F0;
+    overflow: hidden;
+ }
+.button_group{
+    margin:20px auto;
+    width: 20%;
+    height: 50px;
+
+}
+.button_group input{
+    width: 106px;
+    height: 32px;
+    padding: 5px;
+    background-color:dodgerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+.c2e{
+    float: left;
+}
+.e2c{
+    float: right;
+}

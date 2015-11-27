@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>中英转换</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div  class="header">
+    <h1>中英字符转换</h1>
+</div>
+<div class="container clear">
+<div class="left_input">
+    <a href="#" class="textarea-clear-btn hide" id = 'clear_btn' title="清空"></a>
+    <textarea id="input"  name="input" placeholder="请输入转换的文字"></textarea>
+
+</div>
+
+<div class="right_output" >
+    <textarea id="output"  name="output"  readonly="readonly"></textarea>
+</div>
+</div>
+<div class="button_group clear">
+<div class="c2e">
+    <input id="c2e" type="button" value="中转英"/>
+</div>
+<div class="e2c">
+    <input id="e2c" type="button" value="英转中"/>
+</div>
+</div>
+<script src="jquery.js"></script>
+<script src="c2e.js"></script>
+<script>
+
+    $(document).ready(function(){
+        var input =$('#input');
+        var output = $('#output');
+        var output_text;
+//        绑定转换事件
+        $('#c2e').on('click', function(){
+            var input_text = input.val();
+            output_text=c2e(input_text);
+            output.html(output_text);
+        });
+        $('#e2c').on('click',function(){
+            var input_text = input.val();
+            console.log(input_text);
+            output_text=e2c(input_text);
+            console.log(output_text);
+            output.html(output_text);
+        });
+        //清空按钮
+        input.on('input propertychange',function(){
+            var input_text = input.val();
+            //文本框高度自适应
+            $(this).height(this.scrollHeight);
+            output.height(this.scrollHeight);
+
+            if(input_text==''){
+                $('#clear_btn').addClass('hide');
+            }
+            else{
+                $('#clear_btn').removeClass('hide');
+            }
+        });
+        $('#clear_btn').on('click',function(){
+            input.val('');
+            $('#clear_btn').addClass('hide');
+        })
+    });
+
+
+</script>
+</body>
+</html>
